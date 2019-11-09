@@ -1,0 +1,22 @@
+放大视野，比你平时默认的屏幕视野范围要更大。
+/console CameraDistanceMaxFactor 4
+
+
+下马
+/dismount
+
+
+/dbm pull 5
+/y 开怪了
+/in 3   /y 3
+/in 4  /y 2
+/in 5  /y 1
+
+
+这个宏可以给你的目标打上骷髅标志。在你保证生存和足够仇恨的情况下，队员们会很容易找到你要求的目标并加大攻击。
+标志与协助
+/script SetRaidTarget("target", 8)
+/raid 集中火力攻击 ---> %t <--- ！
+/p 集中火力攻击 ---> %t <--- ！
+
+
