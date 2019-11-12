@@ -1,3 +1,36 @@
+#showtooltip 缴械
+/startattack
+/cast 防御姿态
+/cast 缴械
+
+#showtooltip 嘲讽
+/startattack
+/cast 防御姿态
+/cast 嘲讽
+
+压制/复仇/旋风斩
+#showtooltip
+/startattack
+/cast [stance:1]压制;/cast [stance:2]复仇;/cast [stance:3]旋风斩
+
+#showtooltip
+/startattack
+/cast [stance:1]斩杀;/cast [stance:2]嘲讽;/cast [stance:3]斩杀
+
+远程开怪
+#showtooltip
+/startattack
+/cast 枪械射击
+/cast 弩射击
+/cast 弓射击
+/cast 投掷
+
+#show [stance:1]冲锋; [stance:3]拦截
+/dismount [mounted]
+/startattack
+/cast [nocombat,stance:1] 冲锋; [nocombat,nostance:1] 战斗姿态; [combat,nostance:3] 狂暴姿态; [combat,stance:3] 拦截
+
+
 #showtooltip
 /startattack
 /cancelaura 剑刃风暴 
@@ -25,17 +58,9 @@
 /console Sound_EnableSFX 1
 
 
-防恐
 # show 狂暴之怒
 /cast [nostance:3]狂暴姿态;狂暴之怒
 /cast [nostance:2]防御姿态
-
-
-打断
-#showtooltip [equipped:Shields,nostance:3]盾击; 拳击
-#showtooltip [equipped:shield,nostance:3]盾击; 拳击
-/stopcasting
-/cast [nostance:3,noequipped:Shields] 狂暴姿态; [nostance:3,equipped:Shields]盾击; 拳击
 
 
 冲锋/援护/拦截
@@ -54,12 +79,13 @@
 /cast 破釜沉舟
 /bwcb 20 破釜沉舟
 
+
 #showtooltip Shield Wall
 /cast 盾墙
 /bwcb 10 盾墙
 
 
-盾牌猛击+2次毁灭
+盾牌猛击+毁灭
 /castsequence [equipped:Shield] rese2 盾牌猛击, 毁灭, 毁灭
 /cast [noequipped:Shield] 毁灭
 
@@ -74,30 +100,19 @@
 /cast [nocombat, stance:1]冲锋;[combat]乘胜追击
 
 
-斩杀+嗜血
-/castsequence reset=1 斩杀,嗜血
-
-
 压制+英勇
 /cast 压制
 /cast 英勇打击
 
 
-非战斗状态下，非战斗姿态则切换战斗姿态，战斗姿态则施放冲锋；战斗状态下，非狂暴姿态则切换狂暴姿态，狂暴姿态则施放拦截
+冲锋+拦截
 #showtooltip
 /cast [nocombat, stance:1]冲锋;[nocombat, nostance:1]战斗姿态;[combat, stance:3]拦截;[combat]狂暴姿态
 
 
-战斗或防御姿态下，且装备了盾牌则施放盾击；狂暴姿态下施放拳击
+打断
 #showtooltip
 /cast [stance:1/stance:3,equipped:盾牌]盾击;[stance:2]拳击
 
-
-#show [stance:1]冲锋; [stance:3]拦截
-/dismount [mounted]
-/startattack
-/cast 断筋
-/stopcasting
-/cast [nocombat,stance:1] 冲锋; [nocombat,nostance:1] 战斗姿态;[combat,stance:3] 拦截
 
 
